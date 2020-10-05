@@ -1,5 +1,4 @@
-/*
- /* Programmer: Gryphen Clark
+/* Programmer: Gryphen Clark
  * Date: September 25th 2020
  * Purpose: To make a program that allows to discount users on their age and if they have a coupon.
  */
@@ -20,19 +19,24 @@ public class MovieDiscount {
         boolean hasCoupon = input.nextBoolean();
         
         // Print the cost of a movie ticket
-        if (age <= 12 || age >= 65) {
-        	if(hasCoupon == true) {
-        		System.out.println("Your ticket costs $9.5.");
-        	}
-        	else {
-        		System.out.println("Your ticket costs $11.5.");
-        	}
+        if (age < 0) {
+            System.err.println("Invalid age!");
         }
-        else if(hasCoupon == true) {
-    			System.out.println("Your ticket costs $12.5.");
+        else { 
+        	if (age <= 12 || age >= 65) {
+        		if(hasCoupon == true) {
+        			System.out.println("Your ticket costs $9.5.");
+        		}
+        		else {
+        			System.out.println("Your ticket costs $11.5.");
+        		}
+        	}
+        	else if(hasCoupon == true) {
+    				System.out.println("Your ticket costs $12.5.");
         }	
-        else {
-        	System.out.println("Your ticket costs $14.5.");
+        	else {
+        		System.out.println("Your ticket costs $14.5.");
+        	}
         }
     }
 }
