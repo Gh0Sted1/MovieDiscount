@@ -22,18 +22,17 @@ public class MovieDiscount {
         // Print the cost of a movie ticket
         if (age <= 12 || age >= 65) {
         	if(hasCoupon == true) {
-        		System.out.println("Your ticket costs $9.50");
+        		System.out.println("Your ticket costs $9.5.");
         	}
         	else {
-        		if(hasCoupon = false)
-        		System.out.println("Your ticket costs $11.50.");
+        		System.out.println("Your ticket costs $11.5.");
         	}
-        	
+        }
+        else if(hasCoupon == true) {
+    			System.out.println("Your ticket costs $12.5.");
         }	
         else {
-        	if(hasCoupon = true) {
-        		System.out.println("Your ticket costs $12.50");
-        	}
+        	System.out.println("Your ticket costs $14.5.");
         }
     }
 }
